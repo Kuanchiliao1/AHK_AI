@@ -30,3 +30,14 @@ This script is designed to interact with the OpenAI API and generate various typ
 
 ## Additional Information
 This script was written in AutoHotkey and is designed to be used on Windows. It is intended to be used in conjunction with the OpenAI API, which provides a machine learning platform for generating human-like text. The script is designed to make it easy for users to interact with the API and generate different types of text output.
+
+## Future Features
+- Handling of text with exponents and other special characters to prevent script breakage.
+- Exit function if the user does not have any input selected.
+- A prompt preview feature that allows the user to see a sample of the generated output before finalizing the request to the API.
+- Option to save the generated output to a file for future reference.
+- Additional language support for the script.
+- Option to choose from different models provided by OpenAI API.
+- Improved validation of API key to ensure the script can continue to run without interruption.
+- Option to adjust the `temperature` parameter to control the randomness of the generated output. 
+- Improved error handling to provide more detailed feedback to the user in case of issues.
