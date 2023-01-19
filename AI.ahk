@@ -32,7 +32,7 @@ clipboard := clipboard
 
 StringLower, command, command
 if (command == "c" || command == "cloze") {
-  prompt := "Generate fill in the blanks that capture the main points in the following input. Rules { 1. The blanks are short and there may only be one blank per sentence. 2. Make 3-10 of these total. 3. List out answers as a numbered list at the end. 4. Prioritize nouns to avoid ambiguity} Example of good output: `n1. The __ never falls far from the tree. `n2. What comes up must go __. `n3 May the __ always be with you. `n4. What is the powerhouse of the cell? `n1. apple `n2. down `n3. Force `n4 Mitochondria `n Input start:`n" . clipboard
+  prompt := "Please provide a text passage or highlight a section of text. Our AI will analyze the passage and generate fill in the blank statements that capture the main points. The blanks will be short and there will be a maximum of one blank per sentence. A total of 5-10 fill in the blank statements will be generated, and the answers will be listed in a numbered format at the end. Nouns will be prioritized to avoid ambiguity. To fill in the blank must be obvious with minimal context, avoiding words like it, there, our, etc. Here's an example of what the output may look like: The __ never falls far from the tree. What comes up must go __. May the __ always be with you. What is the powerhouse of the cell? Answers:`napple`ndown`nForce`nMitochondria`nPlease provide your text input now:" . clipboard
   command_type := "cloze"
 } else if (command == "k" || command == "key points" || command == "key") {
   prompt := "Extract the key points from the following text in bullet format. Input start:`n" . clipboard
@@ -43,9 +43,6 @@ if (command == "c" || command == "cloze") {
 } else if (command == "t" || command == "terminology" || command == "term") {
   prompt := "Define any terminology an average reader might stuggle with. Input start:`n" . clipboard
   command_type := "terminology"
-} else if (command == "c" || command == "cloze") {
-  prompt := "Generate cloze deletions for the following input. Generate them to cover all the main points and reword every sentence. Wrap the answer in brackets [like so].Make up to 10. Input start:`n" . clipboard
-  command_type := "cloze"
 } else if (command = "s" || command == "summary" || command == "summarize") {
   prompt := "Summarize the following text. Input start:`n" . clipboard
   command_type := "summary"
